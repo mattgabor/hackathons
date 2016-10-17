@@ -5,11 +5,11 @@ import express from 'express';
 import babelify from 'babelify';
 import browserify from 'browserify-middleware';
 
-let app = express();
-let srv = http.createServer(app);
+const app = express();
+const srv = http.createServer(app);
 
 // events
-let io = sio(srv);
+const io = sio(srv);
 io.on('connection', socket => {
   socket.on('move', (data) => {
     console.log('someone moved', data);
