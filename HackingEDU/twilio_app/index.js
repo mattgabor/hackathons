@@ -1,13 +1,13 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('Twilio');
 });
 
-app.post('/sms', function(req, res){
-	var twilio = require('twilio');
-	var resp = new twilio.TwimlResponse();
+app.post('/sms', (req, res) => {
+	const twilio = require('twilio');
+	const resp = new twilio.TwimlResponse();
 
 	resp.message('Gabor');
 
@@ -16,10 +16,10 @@ app.post('/sms', function(req, res){
 
 
 
-var server = app.listen(3000, function () {
+const server = app.listen(3000, () => {
 
-  var host = server.address().address;
-  var port = server.address().port;
+  const host = server.address().address;
+  const port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
 
