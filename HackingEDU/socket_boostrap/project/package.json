@@ -1,7 +1,7 @@
 {
   "name": "workshop",
   "version": "0.0.1",
-  "description": "",
+  "description": "tutorial of socket.io",
   "dependencies": {
     "babelify": "6.0.2",
     "browserify": "9.0.8",
